@@ -1,4 +1,5 @@
-export interface Category{
-    name: string;
-    parentCategory?: Category;
+export interface Category {
+  name: string;
+  parentCategory?: string;
+  isTopLevel: boolean;
 }

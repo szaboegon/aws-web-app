@@ -1,7 +1,7 @@
-enum Condition{
-    satisfactory,
-    fair,
-    good,
-    excellent,
-    brandNew
+export enum Condition {
+  satisfactory,
+  fair,
+  good,
+  excellent,
+  brandNew,
 }
