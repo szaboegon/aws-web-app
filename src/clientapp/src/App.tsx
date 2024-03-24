@@ -4,7 +4,6 @@ import "@mantine/core/styles.css";
 import { Route, Routes } from "react-router-dom";
 import { HomePage } from "./pages/HomePage";
 import { CatalogPage } from "./pages/CatalogPage";
-import { Navbar } from "./components/Navbar";
 import { Header } from "./components/Header";
 import { useDisclosure } from "@mantine/hooks";
 import { SellPage } from "./pages/SellPage";

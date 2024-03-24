@@ -1,9 +1,11 @@
 import { Flex, Grid, Title } from "@mantine/core";
 import { HeroSection } from "../components/HeroSection";
 import { ProductCard } from "../components/ProductCard/ProductCard";
-import { products } from "../assets/products";
+import { useGetProducts } from "../hooks/useGetAllProducts";
 
 export const HomePage = () => {
+  const { data: products } = useGetProducts();
+
   return (
     <>
       <Flex direction="column">
@@ -13,9 +15,9 @@ export const HomePage = () => {
         }
         <div style={{ width: "70%", alignSelf: "center" }}>
           <Title my="20px">Explore products</Title>
-          <Grid gutter={25}>
-            {products.map((p) => (
-              <Grid.Col span={{ xs: 12, sm: 6, xl: 3 }} key={p.name}>
+          <Grid gutter={25} mb={"30px"}>
+            {products?.map((p) => (
+              <Grid.Col span={{ xs: 12, sm: 6, xl: 3 }} key={p.sk}>
                 <ProductCard product={p} />
               </Grid.Col>
             ))}

@@ -1,12 +1,8 @@
-import { Card, Group, Image, Stack, Text } from "@mantine/core";
+import { Card, Group, Image, Text } from "@mantine/core";
 import { Product } from "../../models/product";
 import classes from "./ProductCard.module.css";
 import { ConditionBadge } from "../ConditionBadge";
-import {
-  IconLocation,
-  IconLocationBolt,
-  IconMapPin,
-} from "@tabler/icons-react";
+import { IconMapPin } from "@tabler/icons-react";
 
 interface IProductCardProps {
   product: Product;
@@ -19,7 +15,7 @@ export const ProductCard: React.FC<IProductCardProps> = ({ product }) => {
         <Card.Section mb="md">
           <Image
             h={300}
-            src={product.images[0]}
+            src={product?.images?.length > 0 ? product.images[0] : ""}
             style={{ objectFit: "cover" }}
             alt="product image"
           />
@@ -35,7 +31,7 @@ export const ProductCard: React.FC<IProductCardProps> = ({ product }) => {
         </Text>
         <Group gap={"5px"}>
           <IconMapPin />
-          <Text>{product.location.city + ", " + product.location.counrty}</Text>
+          <Text>{product.location.city + ", " + product.location.country}</Text>
         </Group>
       </Card>
     </>

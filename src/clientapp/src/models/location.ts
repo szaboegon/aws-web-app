@@ -1,6 +1,6 @@
-export interface Location{
-    counrty: string;
-    postalCode: number;
-    city: string;
-    streetAddress: string;
+export interface Location {
+  country: string;
+  postalCode: string;
+  city: string;
+  streetAddress: string;
 }

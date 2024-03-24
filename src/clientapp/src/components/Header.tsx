@@ -1,4 +1,4 @@
-import { Button, Container, Flex, Space, Stack, Title } from "@mantine/core";
+import { Button, Flex, Space, Stack, Title } from "@mantine/core";
 import { CategoriesMenu } from "./CategoriesMenu";
 import { SearchBox } from "./SearchBox";
 import { Link } from "react-router-dom";
