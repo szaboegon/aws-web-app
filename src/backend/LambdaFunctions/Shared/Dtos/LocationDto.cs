@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text.Json.Serialization;
 
 namespace Shared.Dtos
 {
-    public record LocationDto(string Country, string City, string PostalCode, string StreetAddress);
+    public record LocationDto(
+        [property: JsonPropertyName("country")] string Country,
+        [property: JsonPropertyName("city")] string City,
+        [property: JsonPropertyName("postalCode")] string PostalCode,
+        [property: JsonPropertyName("streetAddress")] string StreetAddress
+        );
 }

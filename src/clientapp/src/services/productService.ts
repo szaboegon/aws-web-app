@@ -10,7 +10,13 @@ const apiClient = axios.create({
 
 const getAll = async (): Promise<Product[]> => {
   var response = await apiClient.get<Product[]>("/products");
-  console.log(response.data);
+  return response.data;
+};
+
+const getByCategory = async (categoryName: string): Promise<Product[]> => {
+  var response = await apiClient.get<Product[]>(
+    `/products/by_category?category=${categoryName}`
+  );
   return response.data;
 };
 
@@ -36,5 +42,6 @@ const create = async (data: ProductFormData) => {
 
 export const ProductService = {
   getAll,
+  getByCategory,
   create,
 };

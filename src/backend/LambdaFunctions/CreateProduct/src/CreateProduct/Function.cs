@@ -6,10 +6,8 @@ using Amazon.S3.Model;
 using CreateProduct.Dtos;
 using CreateProduct.Validators;
 using FluentValidation;
-using GetAllProducts.Models;
-using GetAllProducts.Models.Enums;
 using Shared.Models;
-using System.Text.Json;
+using Shared.Models.Enums;
 
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.SystemTextJson.DefaultLambdaJsonSerializer))]
@@ -48,7 +46,7 @@ namespace CreateProduct
 
             var product = new Product()
             {
-                PK = $"product#{input.CategoryName}",
+                PK = $"category#{input.CategoryName}",
                 SK = $"product#{guid}",
                 Name = input.Name,
                 CategoryName = input.CategoryName,

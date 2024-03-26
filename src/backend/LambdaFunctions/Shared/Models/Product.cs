@@ -1,10 +1,9 @@
 ﻿using Amazon.DynamoDBv2.DataModel;
 using GetAllProducts.Converters;
-using GetAllProducts.Models.Enums;
-using Shared.Models;
+using Shared.Models.Enums;
 using System.Text.Json.Serialization;
 
-namespace GetAllProducts.Models
+namespace Shared.Models
 {
     [DynamoDBTable("eMarketplace")]
     public class Product

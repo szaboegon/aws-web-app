@@ -1,7 +1,7 @@
 export enum Condition {
-  satisfactory,
-  fair,
-  good,
-  excellent,
-  brandNew,
+  satisfactory = "satisfactory",
+  fair = "fair",
+  good = "good",
+  excellent = "excellent",
+  brandNew = "brandNew",
 }

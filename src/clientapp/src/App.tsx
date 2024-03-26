@@ -15,7 +15,7 @@ function App() {
   return (
     <MantineProvider theme={theme}>
       <AppShell
-        header={{ height: 110 }}
+        header={{ height: 70 }}
         navbar={{
           width: 300,
           breakpoint: "sm",

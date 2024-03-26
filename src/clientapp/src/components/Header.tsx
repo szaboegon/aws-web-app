@@ -1,6 +1,5 @@
 import { Button, Flex, Space, Stack, Title } from "@mantine/core";
 import { CategoriesMenu } from "./CategoriesMenu";
-import { SearchBox } from "./SearchBox";
 import { Link } from "react-router-dom";
 
 interface IHeaderProps {
@@ -17,7 +16,8 @@ export const Header: React.FC<IHeaderProps> = ({ contentWidth }) => {
             </Title>
           </Link>
           <Space w={"xl"} />
-          <SearchBox />
+          <CategoriesMenu />
+          {/* <SearchBox /> */}
           <Button
             size="md"
             style={{ marginLeft: "auto" }}
@@ -27,9 +27,6 @@ export const Header: React.FC<IHeaderProps> = ({ contentWidth }) => {
             Start selling
           </Button>
         </Flex>
-        <div>
-          <CategoriesMenu />
-        </div>
       </Stack>
     </>
   );

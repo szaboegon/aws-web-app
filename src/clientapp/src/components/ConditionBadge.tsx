@@ -24,9 +24,7 @@ export const ConditionBadge: React.FC<IConditionBadgeProps> = ({
 
   return (
     <>
-      <Badge color={getBadgeColor()}>
-        {Object.values(Condition)[condition]}
-      </Badge>
+      <Badge color={getBadgeColor()}>{Condition[condition]}</Badge>
     </>
   );
 };

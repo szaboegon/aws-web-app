@@ -1,7 +1,7 @@
 import { Flex, Grid, Title } from "@mantine/core";
 import { HeroSection } from "../components/HeroSection";
 import { ProductCard } from "../components/ProductCard/ProductCard";
-import { useGetProducts } from "../hooks/useGetAllProducts";
+import { useGetProducts } from "../hooks/useGetProducts";
 
 export const HomePage = () => {
   const { data: products } = useGetProducts();

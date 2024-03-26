@@ -3,12 +3,17 @@ import { Product } from "../../models/product";
 import classes from "./ProductCard.module.css";
 import { ConditionBadge } from "../ConditionBadge";
 import { IconMapPin } from "@tabler/icons-react";
+import { useEffect } from "react";
 
 interface IProductCardProps {
   product: Product;
 }
 
 export const ProductCard: React.FC<IProductCardProps> = ({ product }) => {
+  useEffect(() => {
+    console.log(product);
+    console.log();
+  });
   return (
     <>
       <Card className={classes.card} shadow="lg" padding={"lg"}>
