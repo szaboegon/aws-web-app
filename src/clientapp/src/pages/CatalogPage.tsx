@@ -11,7 +11,6 @@ export const CatalogPage = () => {
       <Flex direction="column" align={"center"}>
         <div style={{ width: "70%", alignSelf: "center" }}>
           <Title my="20px">Results</Title>
-
           <ProductCatalog
             products={products}
             isError={isError}

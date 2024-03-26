@@ -3,7 +3,7 @@ import { ErrorNotification } from "./ErrorNotification";
 import { ProductCard } from "./ProductCard/ProductCard";
 import { SkeletonCards } from "./SkeletonCards";
 import { Product } from "../models/product";
-import { IconInfoCircleFilled, IconInfoSmall } from "@tabler/icons-react";
+import { IconInfoSmall } from "@tabler/icons-react";
 
 interface IProductCatalogProps {
   products: Product[] | undefined;

@@ -15,7 +15,6 @@ import { useCreateProduct } from "../hooks/useCreateProduct";
 import { Contact } from "../components/ProductForm/Contact";
 import { Details } from "../components/ProductForm/Details";
 import { Images } from "../components/ProductForm/Images";
-import { IconX } from "@tabler/icons-react";
 import { ErrorNotification } from "../components/ErrorNotification";
 
 export const SellPage = () => {
@@ -31,9 +30,10 @@ export const SellPage = () => {
   const { mutateAsync, isLoading, isError } = useCreateProduct();
 
   const onNextRequested = async (data: ProductFormData) => {
-    setFormValues({ ...formValues, ...data });
+    const updatedFormValues = { ...formValues, ...data };
+    setFormValues(updatedFormValues);
     if (active == totalSteps - 1) {
-      await mutateAsync(formValues);
+      await mutateAsync(updatedFormValues);
       nextStep();
     } else {
       nextStep();
