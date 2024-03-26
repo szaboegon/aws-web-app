@@ -1,4 +1,4 @@
-import { Button, Flex, Group, Menu, Skeleton } from "@mantine/core";
+import { Button, Flex, Group, Loader, Menu, Skeleton } from "@mantine/core";
 import { useGetAllCategories } from "../hooks/useGetAllCategories";
 
 interface ICategoriesMenuProps {}
@@ -20,9 +20,7 @@ export const CategoriesMenu: React.FC<ICategoriesMenuProps> = () => {
                   key={c.name}
                   component="a"
                   href={`/catalog?category=${c.normalizedName}`}
-                >
-                  All
-                </Menu.Item>
+                ></Menu.Item>
                 {categories
                   .filter(
                     (child) =>
@@ -41,13 +39,7 @@ export const CategoriesMenu: React.FC<ICategoriesMenuProps> = () => {
               </Menu.Dropdown>
             </Menu>
           ))}
-        {isLoading && (
-          <Group gap="2px">
-            <Skeleton height={35} w={80} />
-            <Skeleton height={35} w={80} />
-            <Skeleton height={35} w={80} />
-          </Group>
-        )}
+        {isLoading && <Loader size={30} />}
       </Flex>
     </>
   );

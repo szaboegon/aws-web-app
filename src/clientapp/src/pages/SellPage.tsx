@@ -16,6 +16,7 @@ import { Contact } from "../components/ProductForm/Contact";
 import { Details } from "../components/ProductForm/Details";
 import { Images } from "../components/ProductForm/Images";
 import { IconX } from "@tabler/icons-react";
+import { ErrorNotification } from "../components/ErrorNotification";
 
 export const SellPage = () => {
   const totalSteps = 3;
@@ -90,14 +91,10 @@ export const SellPage = () => {
           </Button>
         )}
         {isError && (
-          <Notification
-            my="20px"
-            icon={<IconX />}
-            color="red"
+          <ErrorNotification
             title="Creation failed"
-          >
-            Something went wrong. Please try again later.
-          </Notification>
+            body=" Something went wrong. Please try again later."
+          />
         )}
       </Flex>
     </>
